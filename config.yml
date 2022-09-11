@@ -1,0 +1,46 @@
+vms:
+  - name: H2
+    host: domain1.example.ir
+    port: 2223
+    tags:
+      - DE
+      - k8s
+  - name: H16
+    host: domain2.example.ir
+    port: 2223
+    tags:
+      - DE
+      - k8s
+  - name: H128
+    host: domain3.example.ir
+    port: 2223
+    tags:
+      - k8s
+      - DE
+
+  - name: storage
+    host: domain4.example.ir
+    port: 2223
+    tags:
+      - IR
+      - storage
+
+  - name: mail
+    host: domain5.example.ir
+    port: 2223
+    tags:
+      - IR
+      - mail
+
+  - name: P24
+    host: domain7.example.ir
+    port: 2223
+    tags:
+      - k8s
+      - IR
+
+exec:
+  target: DE
+  commands:
+    - hostname
+    - ufw status
